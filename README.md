@@ -12,7 +12,7 @@ Dashboard.io est un dashboard open source créé par Sworder
 
 ## V1 
 
-* La version `0.0.1` a été créée le Dimanche 2 septembre 2018.
+La version `0.0.1` a été créée le Dimanche 2 septembre 2018.
 * Pour utiliser `Dashboard.io`, vous devez demander la permission à Sworder.
 
 ## Installation
@@ -24,7 +24,7 @@ Dashboard.io est un dashboard open source créé par Sworder
 * `CLIENT_TOKEN` ce trouve dans la page de votre bot sur [discordapp.com](https://discordapp.com/developers/applications/)
 * `WEBSITE_URL`doit être la base de l'URL de votre site, si vous êtes en local, mettez simplement: `http://localhost`.
 
-### Fonctionnement
+## Fonctionnement
 
 **note: `npm` et `nodejs` sont requis pour faire fonctionner le bot.**
 * Veuillez à bien mettre la redirection OAuth2 dans les **REDIRECTS** de votre bot.

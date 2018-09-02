@@ -1,7 +1,7 @@
 
 # Dashboard.io
 
-Dashboard.io est un dashboard open source créé par Sworder
+![image](https://cdn.discordapp.com/avatars/485752871027998725/abd8ca42e420f9fcda938f8281d874db.png?size=160)
 
 ## Table des matières
 

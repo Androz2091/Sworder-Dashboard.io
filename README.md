@@ -5,10 +5,10 @@
 
 ## Table des matières
 
->* [Table des matières](#table-des-matières)
->* [V1](#v1)
->* [Installation](#installation)
->* [Fonctionnement](#fonctionnement)
+* [Table des matières](#table-des-matières)
+* [V1](#v1)
+* [Installation](#installation)
+* [Fonctionnement](#fonctionnement)
 
 ## V1 
 

@@ -8,6 +8,7 @@
 * [Table des matières](#table-des-matières)
 * [V1](#v1)
 * [Installation](#installation)
+* [Compléter le fichier `config.json`](#compléter-le-fichier-`config.json`)
 * [Fonctionnement](#fonctionnement)
 
 ## V1 
@@ -16,7 +17,7 @@
 
 ## Installation
 
-### Completer le fichier `config.json`
+### Compléter le fichier `config.json`
 >* `BOT_OWNER_ID` doit être l'**id** de votre compte.
 >* `BOT_TOKEN` doit être le **token** du bot.
 >* `BOT_PREFIX` doit être le **prefix** du bot.

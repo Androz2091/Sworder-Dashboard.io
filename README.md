@@ -26,6 +26,6 @@ Dashboard.io est un dashboard open source créé par Sworder
 
 ### Fonctionnement
 
-* **note: `npm` et `nodejs` sont requis pour faire fonctionner le bot.**
+**note: `npm` et `nodejs` sont requis pour faire fonctionner le bot.**
 * Faites `npm i` afin d'installer touts les modules nécessaire au fonctionnent du bot.
 * Pour allumer le bot, faites `node index.js`.

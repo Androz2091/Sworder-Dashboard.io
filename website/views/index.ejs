@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title><%=client.username%></title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/one-page-wonder.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">Accueil</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="<%= login === 'oui' ? '/profile': '/login' %>"><%=status%></a>
+            </li>
+          <%if(login === 'oui') {%>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Se déconnecter</a>
+            </li>
+          <%}%>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white">
+      <div class="masthead-content">
+        <div class="container">
+          <img class="img-fluid bot-avatar rounded-circle" src="<%=client.displayAvatarURL%>" width="200px" height="200px" alt="">
+          <h3 class="masthead-heading mb-0" style="font-size: 3em !important;"><%=client.username%></h3>
+            <br/>
+            <a class="btn" href="<%=invite%>" role="button">
+              <span>
+                <i class="fa fa-plus" aria-hidden="true"></i>
+              </span>
+            Invitez moi</a>          
+            <a class="btn" href="/login" role="button">
+              <span>
+                <i class="fa fa-sign-in" aria-hidden="true"></i>
+              </span>
+            Se connecter</a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid" src="img/discord-mockup.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h3 class="display-5">Envoyer des messages sur votre serveur !</h3>
+              <p>Comment envoyer un message sans se faire remarquer ? Tout simplement en allant sur la page de votre serveur sur le dashboard !</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="p-5">
+              <img class="img-fluid" src="img/discord-user.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-5">
+              <h2 class="display-5">Simple et facile !</h2>
+              <p>Les utilisateurs ayant marre des bots difficile d'utilisation ? Ne cherchez plus ! <strong>Dashboard.io</strong> est fait pour vous !</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid" src="img/notification-icon.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-5">Contactez l'équipe !</h2>
+              <p>L'équipe du bot est à votre écoute ! N'attendez plus pour poser votre question et rejoignez son serveur <a href="https://discord.gg/h5btT4w" style="color: #007bff !important;">serveur</a> !</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-5 bg-black">
+      <div class="container">
+        <p class="m-0 text-center text-white small">Copyright &copy; <%=client.username%> 2018</p>
+      </div>
+    </footer>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+  </body>
+</html>

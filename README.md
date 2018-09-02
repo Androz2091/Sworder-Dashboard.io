@@ -12,8 +12,8 @@ Dashboard.io est un dashboard open source créé par Sworder
 
 ## V1 
 
-La version `0.0.1` a été créée le Dimanche 2 septembre 2018.
-* Pour utiliser `Dashboard.io`, vous devez demander la permission à Sworder.
+La version `0.0.1` a été créée le Dimanche 2 septembre 2018. Pour utiliser `Dashboard.io`, vous devez:
+* Mettre une **star** au git.
 
 ## Installation
 

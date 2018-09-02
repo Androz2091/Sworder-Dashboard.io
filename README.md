@@ -27,5 +27,7 @@ Dashboard.io est un dashboard open source créé par Sworder
 ### Fonctionnement
 
 **note: `npm` et `nodejs` sont requis pour faire fonctionner le bot.**
+* Veuillez à bien mettre la redirection OAuth2 dans les **REDIRECTS** de votre bot.
+![image](https://cdn.discordapp.com/attachments/485886312398848030/485886331336130561/unknown.png)
 * Faites `npm i` afin d'installer touts les modules nécessaire au fonctionnent du bot.
 * Pour allumer le bot, faites `node index.js`.

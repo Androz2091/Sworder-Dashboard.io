@@ -1,6 +1,3 @@
-const Discord = require("discord.js");
-
-
 module.exports.run = async (client, msg) => {
 
 if(msg.author.id != client.config.BOT_OWNER_ID) return msg.channel.send("❌ Vous n'avez pas les droits nécessaire pour faire cette commande.");
@@ -12,7 +9,8 @@ if(msg.author.id != client.config.BOT_OWNER_ID) return msg.channel.send("❌ Vou
         client.destroy();
 
         process.exit()
-	})
+	    
+    })
 }
 
 

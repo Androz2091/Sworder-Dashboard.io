@@ -8,7 +8,7 @@
 * [Table des matières](#table-des-matières)
 * [V1](#v1)
 * [Installation](#installation)
-* [Compléter le fichier `config.json`](#compléter-le-fichier-`config.json`)
+- * [Compléter le fichier `config.json`](#compléter-le-fichier-config.json)
 * [Fonctionnement](#fonctionnement)
 
 ## V1 

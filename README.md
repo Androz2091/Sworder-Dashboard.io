@@ -12,8 +12,7 @@
 
 ## V1 
 
-> La version `0.0.1` a été créée le Dimanche 2 septembre 2018. Pour utiliser `Dashboard.io`, vous devez:
-Mettre une **star** au git.
+> La version `0.0.1` a été créée le Dimanche 2 septembre 2018. Pour utiliser `Dashboard.io`, vous devez mettre une **star** au git.
 
 ## Installation
 

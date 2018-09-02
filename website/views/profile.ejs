@@ -65,9 +65,9 @@
                <div title="<%= guild.name %>">
               <a href="/serveurs/<%= guild.id %>">
           <% if (guild.icon) { %>
-              <img src="https://cdn.discordapp.com/icons/<%= guild.id %>/<%= guild.icon %>.png?size=2048" width="50px" height="50px" class="guild-icon" />
+              <img src="https://cdn.discordapp.com/icons/<%= guild.id %>/<%= guild.icon %>.png?size=2048" width="70px" height="70px" class="guild-icon" />
           <% } else { %>
-              <canvas class="guild-icon" id="<%= guild.name.replace(/\w+/g, name => name[0]).replace(/\s/g, '') %>" width="50px" height="50px"></canvas>
+              <canvas class="guild-icon" id="<%= guild.name.replace(/\w+/g, name => name[0]).replace(/\s/g, '') %>" width="70px" height="70px"></canvas>
 
       <script>
         function createIcone() {

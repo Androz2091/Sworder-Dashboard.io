@@ -1,7 +1,7 @@
 
 # Dashboard.io
 
-Dashboard.io est dashboard open source créé par Sworder
+Dashboard.io est un dashboard open source créé par Sworder
 
 ## Table des matières
 
@@ -12,7 +12,7 @@ Dashboard.io est dashboard open source créé par Sworder
 
 ## V1 
 
-La version `0.0.1` est créé le Dimanche 2 septembre 2018.
+La version `0.0.1` a été créée le Dimanche 2 septembre 2018.
 /!\ Pour utiliser `Dashboard.io`, vous devez demander la permission à Sworder /!\
 
 ## Installation
@@ -28,4 +28,4 @@ La version `0.0.1` est créé le Dimanche 2 septembre 2018.
 
 **note: `npm` et `nodejs` sont requis pour faire fonctionner le bot.**
 Faites `npm i` afin d'installer touts les modules nécessaire au fonctionnent du bot.
-Pour allumer le bot, faites `node index.js`
+Pour allumer le bot, faites `node index.js`.

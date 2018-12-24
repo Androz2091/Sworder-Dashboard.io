@@ -52,7 +52,7 @@ module.exports.load = async(client) => {
     res.redirect("/");
   });
 
-  http.listen(http.port, function (err) {
+  http.listen(http.port, function(err) {
     if (err) throw err;
     console.log(`Dashboard en ligne sur le port: ${http.port}`);
   });

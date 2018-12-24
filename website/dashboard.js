@@ -1,7 +1,7 @@
 const express = require("express");
 const session = require("express-session");
 const app = express();
-const http = require('http').Server(app);
+const http = require("http").Server(app);
 const passport = require("passport");
 const { Strategy } = require("passport-discord");
 const bodyparser = require("body-parser");
@@ -37,7 +37,7 @@ module.exports.load = async(client) => {
   .engine("html", require("ejs").renderFile)
   .use(express.static(path.join(__dirname, "/public")))
   .set("view engine", "ejs")
-  .set('views', path.join(__dirname, 'views'))
+  .set("views", path.join(__dirname, "views"))
   .use(session({
     secret: "dashboard.io demo",
     resave: false,
@@ -57,7 +57,7 @@ module.exports.load = async(client) => {
     console.log(`Dashboard en ligne sur le port: ${http.port}`);
   });
   
-  process.on('unhandledRejection', (r) => {
+  process.on("unhandledRejection", (r) => {
     console.dir(r);
   });  
 };

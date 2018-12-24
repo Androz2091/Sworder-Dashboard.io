@@ -19,7 +19,7 @@ router.get("/", function(req, res) {
         .get("/logout", async function(req, res) {
             await req.logout();
             await res.redirect("/");
-        })
+        });
 
 
 module.exports = router;

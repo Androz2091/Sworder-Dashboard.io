@@ -20,6 +20,6 @@ router.get("/:guildID", CheckAuth, (req, res) => {
         if(!req.body.send_MESSAGE) return res.send("Erreur, pas de message spécifié");
         await req.client.server.client.guilds.get(req.params.guildID).channels.get(req.body.send_CHANNELID).send(req.body.send_MESSAGE);
         await res.redirect(`/serveurs/${req.params.guildID}`);
-    })
+    });
 
 module.exports = router;

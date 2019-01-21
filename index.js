@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client({
   disableEveryone: true,
-  fetchAllMembers: true,
+  fetchAllMembers: true
 });
 
 const fs = require("fs");
@@ -25,7 +25,7 @@ fs.readdir("./commandes/", (err, files) => {
 });
 
 fs.readdir("./events/", (err, files) => {
-  if (err) throw err;
+  if(err) throw err;
   console.log(`Nombre d\'event en chargement ${files.length}`);
 
   files.forEach((f) => {

@@ -32,9 +32,7 @@ fs.readdir("./events/", (err, files) => {
     const events = require(`./events/${f}`);
     const event = f.split(".")[0];
     client.on(event, events.bind(null, client));
-    setInterval(() => {
-      delete require.cache[require.resolve(`./events/${f}`)];
-    }, 2000) 
+    delete require.cache[require.resolve(`./events/${f}`)];
   });
 });
 

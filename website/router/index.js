@@ -6,10 +6,10 @@ const CheckAuth = require('../auth/CheckAuth');
 router.get("/", function(req, res) { 
     res.render("index.ejs", {
         status: (req.isAuthenticated() ? `${req.user.username}#${req.user.discriminator}` : "Se connecter"),
-        client: req.client.server.client.user,
+        client: req.bot.user,
         user: req.user,
         login: (req.isAuthenticated() ? "oui" : "non"),
-        invite: `https://discordapp.com/oauth2/authorize?client_id=${req.client.server.client.user.id}&scope=bot&permissions=-1`
+        invite: `https://discordapp.com/oauth2/authorize?client_id=${req.bot.user.id}&scope=bot&permissions=-1`
     });
 })
     .get("/login", passport.authenticate("discord", { failureRedirect: "/" }), 

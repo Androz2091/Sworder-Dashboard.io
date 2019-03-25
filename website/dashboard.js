@@ -1,7 +1,6 @@
 const express = require("express");
 const session = require("express-session");
 const app = express();
-const http = require("http").Server(app);
 const passport = require("passport");
 const { Strategy } = require("passport-discord");
 const bodyparser = require("body-parser");
@@ -27,10 +26,7 @@ module.exports.load = async(client) => {
         return done(null, profile);
     });
   }));
-
-  http.port = process.env.PORT || 3000;
-  http.client = client;
-
+  
   app
   .use(bodyparser.json())
   .use(bodyparser.urlencoded({ extended: true }))
@@ -38,6 +34,7 @@ module.exports.load = async(client) => {
   .use(express.static(path.join(__dirname, "/public")))
   .set("view engine", "ejs")
   .set("views", path.join(__dirname, "views"))
+  .set('port', process.env.PORT || 3000)
   .use(session({
     secret: "dashboard.io demo",
     resave: false,
@@ -45,6 +42,10 @@ module.exports.load = async(client) => {
   }))
   .use(passport.initialize())
   .use(passport.session())
+  .use(function(req,res,next){
+    req.bot = client;
+    next();
+  })
   .use("/", require("./router/index"))
   .use("/profile", require("./router/profile"))
   .use("/serveurs", require("./router/serveurs"))  
@@ -52,9 +53,10 @@ module.exports.load = async(client) => {
     res.redirect("/");
   });
 
-  http.listen(http.port, function(err) {
+ app
+  .listen(app.get('port'), (err) => {
     if (err) throw err;
-    console.log(`Dashboard en ligne sur le port: ${http.port}`);
+    console.log(`Dashboard.io online on port :::${app.get('port')}:::`);
   });
   
   process.on("unhandledRejection", (r) => {

@@ -8,7 +8,7 @@ router.get("/:guildID", CheckAuth, (req, res) => {
     if(!req.bot.guilds.get(req.params.guildID).members.get(req.user.id).hasPermission("MANAGE_GUILD")) return res.redirect("/dashboard");
       res.render("guild.ejs", {
         status: (req.isAuthenticated() ? `${req.user.username}#${req.user.discriminator}` : "Se connecter"),
-        client: req.bot.client.user,
+        client: req.bot.user,
         user: req.user,
         avatarURL:`https://cdn.discordapp.com/avatars/${req.user.id}/${req.user.avatar}.png`,
         iconURL:`https://cdn.discordapp.com/avatars/${req.user.id}/${req.user.avatar}.png?size=32`,

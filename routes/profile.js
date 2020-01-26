@@ -1,7 +1,7 @@
 const passport = require('passport');
 const { Router } = require('express');
 
-module.exports.Router = class Home extends Router {
+module.exports.Router = class Profile extends Router {
     constructor() {
         super();
         this.get('/', function(req, res) {

@@ -1,7 +1,13 @@
 {
-	"BOT_OWNER_ID": "",
-	"BOT_TOKEN": "",
-	"BOT_PREFIX": "",
-	"CLIENT_SECRET": "",
-	"WEBSITE_URL": ""
+	"bot": {
+		"id": "",
+		"prefix": "!",
+		"secret": "",
+		"status": "online",
+		"token": "",
+		"url": "http://localhost"
+	},
+	"app": {
+		"port": 3000
+	}
 }

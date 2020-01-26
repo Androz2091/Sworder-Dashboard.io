@@ -19,11 +19,11 @@ La version `0.0.1` a été créée le Dimanche 2 septembre 2018. Pour utiliser `
 ## Installation
 
 ### Compléter le fichier `config.json`
-* `BOT_OWNER_ID` doit être l'**id** de votre compte.
-* `BOT_TOKEN` doit être le **token** du bot.
-* `BOT_PREFIX` doit être le **prefix** du bot.
-* `CLIENT_SECRET` ce trouve dans la page de votre bot sur [discordapp.com](https://discordapp.com/developers/applications/)
-* `WEBSITE_URL`doit être la base de l'URL de votre site, si vous êtes en local, mettez simplement: `http://localhost:3000`.
+* `id` ID de votre bot.
+* `token` doit être le **token** du bot.
+* `prefix` doit être le **prefix** du bot.
+* `secret` ce trouve dans la page de votre bot sur [discordapp.com](https://discordapp.com/developers/applications/)
+* `url`doit être la base de l'URL de votre site, si vous êtes en local, mettez simplement: `http://localhost`.
 
 ## Fonctionnement
 

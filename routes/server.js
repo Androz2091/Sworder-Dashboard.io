@@ -2,7 +2,7 @@ const passport = require('passport');
 const { Router } = require('express');
 const CheckAuth = require('../middlewares/CheckAuth');
 
-module.exports.Router = class Home extends Router {
+module.exports.Router = class Server extends Router {
     constructor() {
         super();
         this.get('/:guildID', (req, res) => {

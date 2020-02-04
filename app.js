@@ -53,7 +53,7 @@ class Website {
         passport.use(new Strategy({
             clientID: this.config.bot.id,
             clientSecret: this.config.bot.secret,
-            callbackURL: `${this.config.bot.url}:${this.app.get('port')}/auth/login`,
+            callbackURL: this.config.bot.callback_url,
             scope: ['identify', 'guilds']
         }, (accessToken, refreshToken, profile, done) => {
             process.nextTick(function() {

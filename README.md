@@ -34,5 +34,5 @@ La version `0.0.1` a été créée le Dimanche 2 septembre 2018. Pour utiliser `
 
 - Veuillez à bien mettre la redirection OAuth2 dans les **REDIRECTS** de votre bot.
 ![image](https://cdn.discordapp.com/attachments/485886312398848030/485886331336130561/unknown.png)
-- Faites `npm i` afin d'installer touts les modules nécessaire au fonctionnent du bot.
+- Faites `npm i` afin d'installer tous les modules nécessaire au fonctionnent du bot.
 - Pour allumer le bot, faites `node app.js`.

@@ -5,7 +5,8 @@
 		"secret": "",
 		"status": "online",
 		"token": "",
-		"callback_url": "http://localhost:3000/auth/login"
+		"url": "http://localhost",
+		"production": false
 	},
 	"app": {
 		"port": 3000

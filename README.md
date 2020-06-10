@@ -25,7 +25,8 @@ La version `0.0.1` a été créée le Dimanche 2 septembre 2018. Pour utiliser `
 - `token` doit être le **token** du bot.
 - `prefix` doit être le **prefix** du bot.
 - `secret` ce trouve dans la page de votre bot sur [discordapp.com](https://discordapp.com/developers/applications/)
-- `url`doit être la base de l'URL de votre site, si vous êtes en local, mettez simplement: `http://localhost`.
+- `url` doit être l'URL vers laquelle les utilisateurs seront redirigés, si vous êtes en local, mettez simplement: `http://localhost`.
+- `production` doit être **true** ou **false**. Si vous utilisez une URL avec le port dedans (comme `localhost:3000`), mettez **false**. Sinon, mettez **true**.
 
 ## Fonctionnement
 

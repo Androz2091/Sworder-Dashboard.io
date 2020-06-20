@@ -8,7 +8,7 @@ const { readdir } = require('fs');
 class Website {
     constructor() {
         this.app = express();
-        this.config = require('./config');
+        this.config = require('./config.json');
         this.bot = require('./bot/index');
         this.bot = this.bot(this.config.bot.token);
         try {
@@ -16,6 +16,7 @@ class Website {
             this._loadRoutes();
             this._start();
         } catch (e) {
+            throw e
             throw new Error(e);
         }
     }
@@ -24,7 +25,7 @@ class Website {
         this.app.set('views', 'views');
         this.app.set('view engine', 'ejs');
         this.app.use(express.static('public'));
-        this.app.set('port', process.env.PORT || this.config.app.port || 3000);
+        this.app.set('port', this.config.app.port || 3000);
         this.app.use(morgan('dev'));
         this.app.use(session({
             secret: `ey.${Date.now()}${this.config.bot.id}${Date.now()}.dashboard.io`,
@@ -56,7 +57,7 @@ class Website {
             callbackURL:
                 this.config.bot.production
                 ? `${this.config.bot.url}/auth/login`
-                : `${this.config.bot.url}:${this.config.bot.app.port}/auth/login`,
+                : `${this.config.bot.url}:${this.config.app.port}/auth/login`,
             scope: ['identify', 'guilds']
         }, (accessToken, refreshToken, profile, done) => {
             process.nextTick(function() {

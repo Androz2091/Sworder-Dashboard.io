@@ -5,7 +5,7 @@ const CheckAuth = require('../middlewares/CheckAuth');
 module.exports.Router = class Server extends Router {
     constructor() {
         super();
-        this.get('/:guildID', (req, res) => {
+        this.get('/:guildID', [CheckAuth], (req, res) => {
             const guild = req.bot.guilds.get(req.params.guildID);
             if (!guild) return res.redirect(`https://discordapp.com/oauth2/authorize?client_id=${req.bot.user.id}&scope=bot&permissions=-1&guild_id=${req.params.guildID}`);
             if (!req.bot.guilds.get(req.params.guildID).members.get(req.user.id).hasPermission("MANAGE_GUILD")) return res.redirect('/profile');

@@ -1,10 +1,11 @@
 const passport = require('passport');
 const { Router } = require('express');
+const CheckAuth = require('../middlewares/CheckAuth');
 
 module.exports.Router = class Profile extends Router {
     constructor() {
         super();
-        this.get('/', function(req, res) {
+        this.get('/', [CheckAuth], function(req, res) {
             res.status(200).render('profile.ejs', {
                 bot: req.bot.user,
                 user: req.user,

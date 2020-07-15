@@ -57,7 +57,6 @@ module.exports.Router = class Auth extends Router {
                 req.session.user = Object.assign(userData.infos, {
                     guilds: Object.values(userData.guilds)
                 });
-                console.log(req.session.user)
                 res.status(200).redirect('/profile');
             } else {
                 res.redirect(`https://discordapp.com/api/oauth2/authorize?client_id=${req.bot.user.id}&scope=identify%20guilds&response_type=code&redirect_uri=${encodeURIComponent(req.config.callbackURL)}`);

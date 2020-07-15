@@ -7,7 +7,7 @@ module.exports.Router = class Home extends Router {
 			res.status(200).render('index.ejs', {
 				bot: req.bot.user,
 				user: req.user,
-				is_logged: (req.isAuthenticated())
+				is_logged: Boolean(req.session.user)
 			});
 		});
 	}

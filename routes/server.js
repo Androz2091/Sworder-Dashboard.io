@@ -11,7 +11,7 @@ module.exports.Router = class Server extends Router {
 			res.status(200).render('guild.ejs', {
 				bot: req.bot.user,
 				user: req.user,
-				is_logged: (req.isAuthenticated()),
+				is_logged: Boolean(req.session.user),
 				avatarURL:`https://cdn.discordapp.com/avatars/${req.user.id}/${req.user.avatar}.png`,
 				iconURL:`https://cdn.discordapp.com/avatars/${req.user.id}/${req.user.avatar}.png?size=32`,
 				guild

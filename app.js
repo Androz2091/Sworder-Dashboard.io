@@ -1,7 +1,5 @@
 const express = require('express');
 const session = require('express-session');
-const passport = require('passport');
-const { Strategy } = require('passport-discord');
 const morgan = require('morgan');
 const { readdir } = require('fs');
 
@@ -9,6 +7,9 @@ class Website {
     constructor() {
         this.app = express();
         this.config = require('./config.json');
+        this.config.callbackURL = this.config.callbackURL = this.config.bot.production
+        ? `${this.config.bot.url}/auth/login`
+        : `${this.config.bot.url}:${this.config.app.port}/auth/login`;
         this.bot = require('./bot/index');
         this.bot = this.bot(this.config.bot.token);
         try {
@@ -34,8 +35,6 @@ class Website {
         }));
         this.app.use(express.json());
         this.app.use(express.urlencoded({ extended: false }));
-        this.app.use(passport.initialize());
-        this.app.use(passport.session());
         this.app.use((req, res, next) => {
             res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
             res.setHeader('Access-Control-Allow-Origin', '*');
@@ -43,27 +42,9 @@ class Website {
             res.setHeader('Access-Control-Allow-Credentials', true);
             req.config = this.config;
             req.bot = this.bot;
+            req.user = req.session.user;
             next();
         });
-        passport.serializeUser((user, done) => {
-            done(null, user);
-        });
-        passport.deserializeUser((obj, done) => {
-            done(null, obj);
-        });
-        passport.use(new Strategy({
-            clientID: this.config.bot.id,
-            clientSecret: this.config.bot.secret,
-            callbackURL:
-                this.config.bot.production
-                ? `${this.config.bot.url}/auth/login`
-                : `${this.config.bot.url}:${this.config.app.port}/auth/login`,
-            scope: ['identify', 'guilds']
-        }, (accessToken, refreshToken, profile, done) => {
-            process.nextTick(function() {
-                return done(null, profile);
-            });
-        }));
     }
 
     _loadRoutes() {

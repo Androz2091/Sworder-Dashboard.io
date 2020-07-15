@@ -35,7 +35,7 @@
     <header class="masthead text-center text-white">
       <div class="masthead-content">
         <div class="container">
-          <img class="img-fluid bot-avatar rounded-circle" src="<%= bot.displayAvatarURL %>" width="200px" height="200px" alt="">
+          <img class="img-fluid bot-avatar rounded-circle" src="<%= bot.displayAvatarURL() %>" width="200px" height="200px" alt="">
           <h3 class="masthead-heading mb-0" style="font-size: 3em !important;"><%= bot.username %></h3>
             <br/>
             <a class="btn" href="https://discordapp.com/oauth2/authorize?client_id=<%= bot.id %>&scope=bot&permissions=-1" role="button">

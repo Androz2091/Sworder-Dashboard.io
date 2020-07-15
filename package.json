@@ -10,7 +10,7 @@
   "license": "GPL-3.0",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "discord.js": "^11.3.2",
+    "discord.js": "^12.2.0",
     "ejs": "^2.6.1",
     "erlpack": "github:hammerandchisel/erlpack",
     "express": "^4.16.3",

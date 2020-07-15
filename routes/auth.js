@@ -62,6 +62,7 @@ module.exports.Router = class Auth extends Router {
             } else {
                 res.redirect(`https://discordapp.com/api/oauth2/authorize?client_id=${req.bot.user.id}&scope=identify%20guilds&response_type=code&redirect_uri=${encodeURIComponent(req.config.callbackURL)}`);
             }
+        });
         this.get('/logout', [CheckAuth], function(req, res) {
             req.logout();
             res.status(200).redirect('/');

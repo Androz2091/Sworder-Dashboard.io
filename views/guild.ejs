@@ -62,9 +62,9 @@
               <strong>Propriétaire:</strong> <%=guild.owner.user.tag%><br />
               <strong>ID:</strong> <%=guild.id %><br />
               <strong>Nombre de membres:</strong> <%=guild.memberCount%><br />
-              <strong>Salons vocaux:</strong> <%=guild.channels.filter(c => c.type === 'voice').size%><br />
-              <strong>Salons textuels:</strong> <%=guild.channels.filter(c => c.type === 'text').size%> <br />
-              <strong>Nombre de roles:</strong> <%=guild.roles.size%><br />
+              <strong>Salons vocaux:</strong> <%=guild.channels.cache.filter(c => c.type === 'voice').size%><br />
+              <strong>Salons textuels:</strong> <%=guild.channels.cache.filter(c => c.type === 'text').size%> <br />
+              <strong>Nombre de roles:</strong> <%=guild.roles.cache.size%><br />
               <strong>Region:</strong> <%=guild.region%><br />
               <strong>Date de création:</strong> <%=guild.createdAt.toUTCString()%><br />
             </p>
@@ -81,7 +81,7 @@
             <b>Sélectionner un salon: </b>
             <select id="select-channel" name="send_CHANNELID" aria-controls="config" class="form-control form-control-sm" style="margin-bottom: 5px;">
               <option value="NOT_SET">None</option>
-              <% guild.channels.filter(c => c.type === 'text').filter(c => c.permissionsFor(bot).has("SEND_MESSAGES") && c.permissionsFor(bot).has("READ_MESSAGES")).forEach(c => { %>
+              <% guild.channels.cache.filter(c => c.type === 'text').filter(c => c.permissionsFor(bot).has("SEND_MESSAGES") && c.permissionsFor(bot).has("READ_MESSAGES")).forEach(c => { %>
                 <option value="<%= c.id %>" selected>#<%= c.name %></option>
               <% }); %>
             </select>

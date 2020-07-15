@@ -9,7 +9,6 @@
   "author": "Sworder",
   "license": "GPL-3.0",
   "dependencies": {
-    "body-parser": "^1.18.3",
     "btoa": "^1.2.1",
     "discord.js": "^12.2.0",
     "ejs": "^2.6.1",

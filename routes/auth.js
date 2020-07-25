@@ -62,7 +62,7 @@ module.exports.Router = class Auth extends Router {
 			}
 		});
 		this.get('/logout', [CheckAuth], function(req, res) {
-			req.logout();
+			req.session.destroy();
 			res.status(200).redirect('/');
 		});
 	}
